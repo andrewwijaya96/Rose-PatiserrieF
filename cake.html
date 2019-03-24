@@ -24,12 +24,12 @@
   <body>
     <!--Header-->
     <header>
-      <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="gotoHome()">
+      <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
     </header>
     <!--Headnav-->
         <div class="headNav">
           <a class="headNavText active" style="position: absolute; left: 25%;">C A K E S</a>
-          <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;">C H O U X</a>
+          <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;" onclick="goToChoux()">C H O U X</a>
         </div>
   <div class="badan">
    <!--Products-->
@@ -40,20 +40,24 @@
         <div class="container">
           <img src="Photos/Cakes/avocado.png" alt="Avatar" class="image">
           <div class="overlay">
-            <span class="productName">Avocado & Brownie Cake</span>
-            <span class="productPrice">Rp 69.000</span>
-            <input type="button" name="" value="B U Y" class="buyBut add-to-cart" data-name="Avocado & Brownie Cake" data-price="69000">
+            <div class="selection" onclick="goToAbcInfo()">
+             <span class="productName">Avocado Brownie Cake</span>
+             <span class="productPrice">Rp 69.000</span>
+           </div>
+            <input type="button" name="" value="B U Y &nbsp; 1" class="buyBut add-to-cart" data-name="Avocado Brownie Cake" data-price="69000">
           </div>
         </div>
       </td>
       <td width="60px"></td>
       <td>
-        <div class="container" onclick="goToSwcInfo()">
+        <div class="container">
           <img src="Photos/Cakes/wmelon.png" alt="Avatar" class="image">
           <div class="overlay">
-            <span class="productName">Strawberry & Watermelon Cake</span>
-            <span class="productPrice">Rp 65.000</span>
-            <input type="button" name="" value="B U Y" class="buyBut add-to-cart" data-name="Strawberry & Watermelon Cake" data-price="65000">
+            <div class="selection" onclick="goToSwcInfo()">
+              <span class="productName">Strawberry Watermelon Cake</span>
+              <span class="productPrice">Rp 65.000</span>
+            </div>
+            <input type="button" name="" value="B U Y &nbsp; 1" class="buyBut add-to-cart" data-name="Strawberry Watermelon Cake" data-price="65000">
           </div>
         </div>
       </td>
@@ -67,5 +71,6 @@
    </footer>
    <script src="jquery-3.3.1.min.js"></script>
    <script src="SC.js"></script>
+   <script src="nav.js"></script>
   </body>
 </html>

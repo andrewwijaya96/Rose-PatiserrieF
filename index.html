@@ -54,6 +54,7 @@
       }
       .p2{
         color: #6e4022;
+        text-align:center;
       }
       .k3 {
         top:308%;
@@ -61,19 +62,20 @@
       }
       .p3{
         color:#faede0;
+        text-align:right;
       }
     </style>
   </head>
   <body>
     <!--Header-->
     <div class="kepala">
-      <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="gotoHome()">
+      <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
     </div>
 
     <!--Headnav-->
         <div class="headNav">
-          <a class="headNavText nonactive" style="position: absolute; left: 25%;">C A K E S</a>
-          <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;">C H O U X</a>
+          <a class="headNavText nonactive" style="position: absolute; left: 25%;" onclick="goToCake()">C A K E S</a>
+          <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;" onclick="goToChoux()">C H O U X</a>
         </div>
 
    <!--Slider-->
@@ -98,44 +100,31 @@
   <div class="konten1">
     <span class="judul">Strawberry Watermelon Cake</span>
     <div class="isi">
-      What could be better than a sweet and
-      fresh cake at the same time? Fresh
-      watermelon cut between each layer,
-      combined with fresh diplomat cream,
-      soft jaconde sponge,
-      balaned with fresh strawberry and matcha nibs
+      What could be better than a sweet and fresh cake at the same time? Fresh watermelon cut between each layer, combined with fresh diplomat cream, soft jaconde sponge, balaned with fresh strawberry and matcha nibs
     </div>
-    <span class="gmInfo C" onClick="goToSwcInfo">GET MORE INFO</span>
+    <span class="gmInfo C" onClick="goToSwcInfo()">GET MORE INFO</span>
   </div>
   <div class="konten2">
     <span class="judul k2">Avocado Brownie Cake</span>
     <div class="isi p2">
-      What could be better than a sweet and
-      fresh cake at the same time? Fresh
-      watermelon cut between each layer,
-      combined with fresh diplomat cream,
-      soft jaconde sponge,
-      balaned with fresh strawberry and matcha nibs
+      Consists of crushed Regal biscuit layered with avocado mousse and dark chocolate brownie, finished with bites of regal biscuit and crunchy pearls. What could go wrong?
     </div>
-    <span class="gmInfo L" onClick="goToAbcInfo">GET MORE INFO</span>
+    <span class="gmInfo L" onClick="goToAbcInfo()">GET MORE INFO</span>
   </div>
   <div class="konten3">
     <span class="judul k3">Choux Bun</span>
     <div class="isi p3">
-      What could be better than a sweet and
-      fresh cake at the same time? Fresh
-      watermelon cut between each layer,
-      combined with fresh diplomat cream,
-      soft jaconde sponge,
-      balaned with fresh strawberry and matcha nibs
+      Water, sugar, salt, flour, eggs, butter. Boom. Magic.<br>
+      Green milk tea, thai milk tea, rose milk tea. All in one box.
     </div>
-    <span class="gmInfo R" onClick="goToAbcInfo">GET MORE INFO</span>
+    <span class="gmInfo R" onClick="goToChoux()">GET MORE INFO</span>
   </div>
    <footer style="position:relative;">
      <span class="footerText L">A B O U T &nbsp; &nbsp; U S</span>
      <span class="footerText C">C O N T A C T &nbsp; &nbsp; U S</span>
    </footer>
-      <script src="jquery-3.3.1.min.js"></script>
+   <script src="jquery-3.3.1.min.js"></script>
    <script src="slideshow.js"></script>
+   <script src="nav.js"></script>
   </body>
 </html>
