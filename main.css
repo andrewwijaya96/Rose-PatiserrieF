@@ -43,3 +43,11 @@ body {
   width: 100%;
   transition: width .3s;
 }
+.SCart{
+  position: absolute;
+  top: 6px;
+  right: 30px;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+}

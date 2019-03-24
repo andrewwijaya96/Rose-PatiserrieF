@@ -3,23 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rose Patisserie</title>
+    <title>Rose Patiserrie</title>
+    <link rel="icon" href="Photos/roseIcon.png">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="headnav.css">
-    <link rel="stylesheet" href="kontProduk.css">
     <link rel="stylesheet" href="footer.css">
     <style media="screen">
-    html{
-      height: 720px;
-      width: 1280px;
-    }
       * {
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
       }
-      .konten1{
+      .kontenabt{
         width:100vw;
+        height:100vh;
+        background-image: url("wmelonscreen.jpg");
       }
     </style>
   </head>
@@ -27,6 +25,7 @@
     <!--Header-->
     <div class="kepala">
       <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
+      <span class="SCart"><img src="Photos/cart.png" alt="Cart Icon" onclick="goToCart()" height="35px" width="35px"></span>
     </div>
 
     <!--Headnav-->
@@ -35,27 +34,15 @@
           <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;" onclick="goToChoux()">C H O U X</a>
         </div>
     <!--Konten-->
-        <div class="konten1">
-          <table style="margin:-10px 0px -10px -5px;">
-            <tr>
-              <td width="30%"><img src="Photos/GIF/swcSlide.gif" class="proSlider" loop></td>
-              <td>
-                <span class="judul">Strawberry Watermelon Cake</span>
-                <p class="isi">
-                  What could be better than a sweet and fresh cake at the same time? Fresh watermelon cut between each layer, combined with fresh diplomat cream, soft jaconde sponge, balaned with fresh strawberry and matcha nibs
-                </p>
-                <input type="button" name="" value="B U Y" class="buyBut add-to-cart" data-name="Strawberry Watermelon Cake" data-price="65000">
-              </td>
-            </tr>
-          </table>
-        <div>
-    <!--Footer-->
+        <div class="kontenabt">
+          
+        </div>
    <footer style="position:relative;">
      <span class="footerText L">A B O U T &nbsp; &nbsp; U S</span>
      <span class="footerText C">C O N T A C T &nbsp; &nbsp; U S</span>
    </footer>
-      <script src="jquery-3.3.1.min.js"></script>
-      <script src="SC.js"></script>
-      <script src="nav.js"></script>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script src="slideshow.js"></script>
+   <script src="nav.js"></script>
   </body>
 </html>

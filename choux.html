@@ -21,6 +21,14 @@
       .konten1{
         width:100vw;
       }
+      .comments{
+        padding: 0px 160px;
+        font-size: 18px;
+        text-align: center;
+      }
+      .mySlides{
+        display:none;
+      }
     </style>
   </head>
   <body>
@@ -43,8 +51,19 @@
                 <span class="judul">Assorted Choux Buns</span>
                 <p class="isi">
                   Water, sugar, salt, flour, eggs, butter. Boom. Magic.<br>
-                  Green milk tea, thai milk tea, rose milk tea. All in one box.                </p>
-                <input type="button" name="" value="B U Y &nbsp; 1" class="buyBut add-to-cart" data-name="Assorted Choux Buns" data-price="39000">
+                  Green milk tea, thai milk tea, rose milk tea. All in one box.
+                </p>
+                <div class="comments">
+                  <div class="mySlides">
+                    "<u>@Illenerosalin</u> Illene Thankyou banget ya ini sih Choux bun nya enak banget My fav definetly the Thai Milk Tea one."
+                  </div>
+                  <div class="mySlides">
+                    "enak fillingnya banyak bgt trus manisnya pas ga enek."
+                  </div>
+                  <div class="mySlides">
+                    "rasanya unik dan enak total apalagi ya thai milk tea kyk minum thai tea tapi dalam bentuk kue, baunya fragrant banget."
+                  </div>
+                <input type="button" name="" value="B U Y" class="buyBut add-to-cart" data-name="Assorted Choux Buns" data-price="39000">
               </td>
             </tr>
           </table>
@@ -57,5 +76,21 @@
       <script src="jquery-3.3.1.min.js"></script>
       <script src="SC.js"></script>
       <script src="nav.js"></script>
+      <script>
+      var slideIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 2000);
+      }
+      </script>
   </body>
 </html>
