@@ -22,6 +22,7 @@ body {
 }
 .gmInfo{
   font-family:Arial;
+  font-weight: 300;
   font-size: 28px;
   margin-top: 180px;
   color:#fdf7ef;
