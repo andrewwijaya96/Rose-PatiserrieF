@@ -3,6 +3,7 @@
   height: 75px;
   width: auto;
   margin: 5px 0px;
+  cursor: pointer;
 }
 .headNav {
   position: relative;

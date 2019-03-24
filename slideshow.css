@@ -1,7 +1,7 @@
 .Slideshow {
   position: relative;
   width: 100%;
-  height: 504px;
+  height: 550px;
   margin-top: -5px;
 }
 
@@ -18,7 +18,7 @@
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -252px;
+  margin-top: -275px;
   height: 100%;
   padding: 16px;
   color: white;
@@ -45,15 +45,6 @@
 }
 
  /*Caption text*/
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
 
  .mySlides {
    display: none;
@@ -61,16 +52,25 @@
    width: inherit;
  }
 
- .dot {
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  transform: translate(-50%, 0);
+}
+
+ .dot{
+   margin: 0px 3px;
    cursor: pointer;
    height: 18px;
    width: 18px;
-   margin: 0 2px;
    background-color: #fdf7ef;
    border-radius: 50%;
    display: inline-block;
    transition: background-color 0.6s ease;
+   z-index: 999;
  }
+
 
  .active, .dot:hover {
    background-color: #f9a2a2;

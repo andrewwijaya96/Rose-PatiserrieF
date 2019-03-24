@@ -17,7 +17,7 @@
       }
 
       .receipt{
-        position: absolute;
+        position: relative;
         transform: translateX(-50%);
         width: 40%;
         top: 12%;
@@ -37,6 +37,7 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
+        width: 450px;
       }
       .sub-item, .delete-item{
     		cursor: pointer;
@@ -52,13 +53,13 @@
     		transition-duration: 0.3s;
     	}
     	.cartShown{
-    		width: 360px;
+    		width: 600px;
     	}
     	.itemName {
-    		width: 20%;
+    		width: 50%;
     	}
     	.itemCount {
-    		width: 20%;
+    		width: 4%;
     	}
     	.itemPrice {
     		width: 20%;
@@ -68,92 +69,40 @@
         bottom: 6px;
         left: 6px;
       }
+      .badan{
+        height: 100vh;
+        width: 100vw;
+      }
     </style>
   </head>
   <body>
     <!--Header-->
     <div class="kepala">
-      <img src="" alt="" class="homeIcon C" >
+      <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="gotoHome()">
     </div>
     <!--Headnav-->
         <div class="headNav">
           <a class="headNavText nonactive" style="position: absolute; left: 25%;">C A K E S</a>
           <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;">C H O U X</a>
         </div>
+  <div class="badan">
   <!--Content-->
   <div style="konten">
     <div class="receipt">
-        <span class="receiptTitle">Checkout</span>
+        <span class="receiptTitle">Your Cart</span>
         <br>
         <table id="show-cart"><br></table>
         <br>
         <button id="clear-cart" onClick="clearCart()" style="cursor:pointer; border-radius:5px; font-size:16px; height:30px; width:90px; margin-top:18px;">Clear Cart</button>
     </div>
   </div>
+</div>
 
-
-   <footer style="position:absolute;">
+   <footer style="position:relative;">
      <span class="footerText L">A B O U T &nbsp; &nbsp; U S</span>
      <span class="footerText C">C O N T A C T &nbsp; &nbsp; U S</span>
    </footer>
       <script src="jquery-3.3.1.min.js"></script>
-      <script>
-      $(".add-to-cart").click(function(event){
-              event.preventDefault();
-              var name = $(this).attr("data-name");
-              var price = Number($(this).attr("data-price"));
-              addItemToCart(name, price, 1);
-              displayCart();
-            });
-
-            function displayCart(){
-              var cartArray = listCart();
-              var output ="";
-              for (var i in cartArray){
-                output += "<tr>"
-      			  +"<td class='itemName'>"
-      			  +cartArray[i].name
-      			  +"</td>"
-      				+"<td class='itemPrice'>"
-      			  +"Rp "
-      			  +cartArray[i].price
-              +"</td>"
-              +"<td>"
-      				+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-      				+"</td>"
-      			  +"<td class='itemCount'>"
-      			  +cartArray[i].count
-      			  +"</td>"
-      				+"<td>"
-      		  	+"<span class='sub-item' data-name='"+cartArray[i].name+"'>-</span>"
-      			  +"</td>"
-      				+"<td>"
-      				+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-      				+"</td>"
-      				+"<td>"
-      			  +"<span class='delete-item' data-name='"+cartArray[i].name+"'>&times;</span>"
-      				+"</td>"
-      				+"</tr>"
-              }
-              $("#show-cart").html(output);
-              $("#total-cart").html( totalCart() );
-      		$("#cart-count").html( countCart() );
-      		saveCart();
-            }
-
-      	$("#show-cart").on("click", ".delete-item", function(event) {
-      		var name = $(this).attr("data-name");
-      		removeItemFromCartAll(name);
-      		displayCart();
-      	});
-
-      	$("#show-cart").on("click", ".sub-item", function(event) {
-      		var name = $(this).attr("data-name");
-      		removeItemFromCart(name);
-      		displayCart();
-      	});
-
-      </script>
       <script src="SC.js"></script>
   </body>
 </html>

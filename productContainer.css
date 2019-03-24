@@ -2,6 +2,7 @@
   position: relative;
   width: 360px;
   height: 360px;
+  cursor: pointer;
 }
 
 .image {

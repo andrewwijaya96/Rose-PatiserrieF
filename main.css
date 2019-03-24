@@ -20,3 +20,25 @@ body {
   float: right;
   right: 12%;
 }
+.gmInfo{
+  font-family:Arial;
+  font-size: 28px;
+  margin-top: 180px;
+  color:#fdf7ef;
+  cursor: pointer;
+}
+
+.gmInfo::after {
+  position: relative;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s;
+}
+
+.gmInfo:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
