@@ -1,0 +1,77 @@
+.Slideshow {
+  position: relative;
+  width: 100%;
+  height: 504px;
+  margin-top: -5px;
+}
+
+.slidePhoto {
+  height: inherit;
+  width: inherit;
+  position: relative;
+}
+
+/*Tombol - Tombol Navigasi Slideshow*/
+/*Tombol - Tombol Next & Previous*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -252px;
+  height: 100%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+}
+.arrow {
+  position: relative;
+  top: 50%;
+}
+
+ /*Next Button di Kanan*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*Ubah Warna ketika Hover*/
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.9);
+  opacity: .4;
+  transition: 0.6s ease;
+}
+
+ /*Caption text*/
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+ .mySlides {
+   display: none;
+   height: inherit;
+   width: inherit;
+ }
+
+ .dot {
+   cursor: pointer;
+   height: 18px;
+   width: 18px;
+   margin: 0 2px;
+   background-color: #fdf7ef;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+ }
+
+ .active, .dot:hover {
+   background-color: #f9a2a2;
+ }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Patiserrie</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headnav.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="footer.css">
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+      .konten1{
+        width:100vw;
+        height:100vh;
+        background-color:red;
+      }
+      .konten2{
+        width:100vw;
+        height:100vh;
+        background-color:green;
+      }
+      .konten3{
+        width:100vw;
+        height:100vh;
+        background-color:blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+    <div class="kepala">
+      <img src="Photos/LOGO.png" alt="" class="homeIcon C" >
+    </div>
+
+    <!--Headnav-->
+        <div class="headNav">
+          <a class="headNavText nonactive" style="position: absolute; left: 25%;">C A K E S</a>
+          <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;">C H O U X</a>
+        </div>
+
+   <!--Slider-->
+   <div class="Slideshow">
+
+     <div class="mySlides slide">
+       <img class="slidePhoto" src="Photos/Slideshow/image1.jpg" alt="Image 1">
+       <div class="text">Caption Text</div>
+     </div>
+
+     <div class="mySlides slide">
+       <img class="slidePhoto" src="Photos/Slideshow/image2.jpeg" alt="Image 2">
+       <div class="text">Caption Text</div>
+     </div>
+
+     <a class="prev" onclick="plusSlides(-1)"><span class="arrow">&#10094;</span></a>
+     <a class="next" onclick="plusSlides(1)"><span class="arrow">&#10095;</span></a>
+  </div>
+
+  <div style="text-align: center; padding:15px 0px; background-color:rgba(255,255,255,0.8);">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+  <!--Content-->
+  <div class="konten1">
+
+  </div>
+  <div class="konten2">
+
+  </div>
+  <div class="konten3">
+
+  </div>
+   <footer style="position:relative;">
+     <span class="footerText L">A B O U T &nbsp; &nbsp; U S</span>
+     <span class="footerText C">C O N T A C T &nbsp; &nbsp; U S</span>
+   </footer>
+      <script src="jquery-3.3.1.min.js"></script>
+   <script src="slideshow.js"></script>
+  </body>
+</html>

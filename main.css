@@ -1,0 +1,22 @@
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.L{
+  position: absolute;
+  left: 12%;
+}
+
+.C{
+  float: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.R{
+  position: absolute;
+  float: right;
+  right: 12%;
+}

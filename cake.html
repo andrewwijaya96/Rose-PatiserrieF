@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Patiserrie</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headnav.css">
+    <link rel="stylesheet" href="productContainer.css">
+    <link rel="stylesheet" href="footer.css">
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <img src="Photos/LOGO.png" alt="" class="homeIcon C" >
+    </header>
+    <!--Headnav-->
+        <div class="headNav">
+          <a class="headNavText active" style="position: absolute; left: 25%;">C A K E S</a>
+          <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;">C H O U X</a>
+        </div>
+   <!--Products-->
+   <table style="position:absolute !important; top:60%; transform: translate(0, -60%)">
+     <tr>
+      <td width="250px"></td>
+      <td>
+        <div class="container">
+          <img src="Photos/Cakes/avocado.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <span class="productName">Avocado & Brownie Cake</span>
+            <span class="productPrice">Rp 69.000</span>
+            <input type="button" name="" value="B U Y" class="buyBut add-to-cart" data-name="Avocado & Brownie Cake" data-price="150.000">
+          </div>
+        </div>
+      </td>
+      <td width="60px"></td>
+      <td>
+        <div class="container">
+          <img src="Photos/Cakes/wmelon.png" alt="Avatar" class="image">
+          <div class="overlay">
+            <span class="productName">Strawberry & Watermelon Cake</span>
+            <span class="productPrice">Rp 65.000</span>
+            <input type="button" name="" value="B U Y" class="buyBut add-to-cart" data-name="Strawberry & Watermelon Cake" data-price="65.000">
+          </div>
+        </div>
+      </td>
+      <td width="250px"></td>
+     </tr>
+    </table>
+
+
+   <footer style="position:absolute;">
+     <a class="footerText L">A B O U T &nbsp; &nbsp; U S</a>
+     <a class="footerText C">C O N T A C T &nbsp; &nbsp; U S</a>
+   </footer>
+   <script src="jquery-3.3.1.min.js"></script>
+   <script>
+   $(".add-to-cart").click(function(event){
+           event.preventDefault();
+           var name = $(this).attr("data-name");
+           var price = Number($(this).attr("data-price"));
+           addItemToCart(name, price, 1);
+           displayCart();
+         });
+
+         function displayCart(){
+           var cartArray = listCart();
+           var output ="";
+           for (var i in cartArray){
+             output += "<li>"
+           +"&nbsp;"
+           +cartArray[i].name
+           +"&nbsp;"
+           +"Rp"
+           +" "
+           +cartArray[i].price
+           +"&nbsp;"
+           +cartArray[i].count
+           +"&nbsp;"
+             +"<span class='sub-item' data-name='"+cartArray[i].name+"'>-</span>"
+           +" "
+           +"<span class='delete-item' data-name='"+cartArray[i].name+"'>&times;</span>"
+     +"</li>"
+           }
+           $("#show-cart").html(output);
+           $("#total-cart").html( totalCart() );
+       $("#cart-count").html( countCart() );
+       saveCart();
+         }
+
+     $("#show-cart").on("click", ".delete-item", function(event) {
+       var name = $(this).attr("data-name");
+       removeItemFromCartAll(name);
+       displayCart();
+     });
+
+     $("#show-cart").on("click", ".sub-item", function(event) {
+       var name = $(this).attr("data-name");
+       removeItemFromCart(name);
+       displayCart();
+     });
+   </script>
+   <script src="SC.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+footer {
+  background-color: #c67b91;
+  bottom: 0px;
+  width: 100%;
+  height: 80px;
+}
+.footerText{
+  word-spacing: -5px;
+  font-family: Lao, sans-serif;
+  padding: 20px 0px 0px 0px;
+  font-weight: lighter;
+  font-size: 24px;
+  color: black;
+  transition-duration: 0.4s;
+}
+
+.footerText:hover{
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
