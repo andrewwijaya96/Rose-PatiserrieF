@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rose Patiserrie</title>
+    <title>Rose Patisserie</title>
     <link rel="icon" href="Photos/roseIcon.png">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="headnav.css">
@@ -38,51 +38,6 @@
         text-align: center;
         margin-bottom: -18px;
       }
-      #show-cart {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 450px;
-      }
-      .sub-item, .delete-item{
-    		cursor: pointer;
-    		font-size: 36px;
-    		color: black;
-    		transition-duration: 0.3s;
-    	}
-
-    	.sub-item:hover, .delete-item:hover{
-    		cursor: pointer;
-    		font-size: 36px;
-    		color: gray;
-    		transition-duration: 0.3s;
-    	}
-    	.cartShown{
-    		width: 600px;
-    	}
-    	.itemName {
-    		width: 50%;
-    	}
-    	.itemCount {
-    		width: 4%;
-    	}
-    	.itemPrice {
-    		width: 20%;
-    	}
-      #clear-cart{
-        position: relative;
-        bottom: 6px;
-        left: 6px;
-      }
-      .badan{
-        height: 80vh;
-        width: 100vw;
-      }
-      #checkout{
-        position: relative;
-        bottom: 6px;
-        right: 6px;
-      }
       .isiForm{
         font-size: 20px;
         margin: 5px 0px;
@@ -91,15 +46,16 @@
         border-radius: 8px;
         padding: 3px 0px 3px 4px;
       }
-      form{
+      .form{
         width: 100%;
         padding: 0px 20px;
+        font-family: Lao, sans-serif;
       }
       .submit{
         position: relative;
         transform: translateX(-50%);
         left:50%;
-        top:12px;
+        top:-5px;
         width: 120px;
         height: 40px;
         padding: 0px;
@@ -182,7 +138,7 @@
   <body>
     <!--Header-->
     <div class="kepala">
-      <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
+      <img src="Photos/LOGO.png" alt="Logo Rose Patisserie" class="homeIcon C" onclick="goToHome()">
     </div>
     <!--Headnav-->
         <div class="headNav">
@@ -195,11 +151,11 @@
         <h1 class="receiptTitle">Checkout</h1>
         <br>
         <br>
-        <form>
+        <div class="form">
           <input class="isiForm" type="text" name="name" value="" placeholder="Full Name" required id="nama">
           <input class="isiForm" type="tel" name="phone" value="" placeholder="Phone Number" required id="telp">
           <textarea class="isiForm" name="address" value="" placeholder="Delivery Address" required rows="4" style="font-size:16px;" id="alamat"></textarea>
-          <input class="isiForm" type="email" name="phone" value="" placeholder="Email Address" id="email">
+          <input class="isiForm" type="email" name="email" value="" placeholder="Email Address" id="email">
         <br>
           <h1 class="receiptTitle" style="margin-bottom:-30px;">Payment Option</h1>
           <table style="position:relative; left:50%; transform:translateX(-50%); margin-top: 50px">
@@ -235,17 +191,29 @@
             </tr>
           </table>
           <br>
-          <input type="submit" name="submit" class="submit">
-        </form>
+          <br>
+          <input type="submit" name="submit" class="submit" onclick="checkout()">
+        <br>
         <br>
     </div>
   </div>
+  </div>
+  <table style="width:100%; visibility:hidden;">
+    <tr>
+      <td style="width:25%;"><span>Total Cost : Rp <span id="total-cart"></span></span></td>
+      <td style="width:25%;"><span style="padding-left:60px;">Total Item : <span id="cart-count">0</span></span></td>
+    </tr>
+  </table>
+  <table id="show-cart" style="width:100%; visibility:hidden;"><br></table>
+  <br>
+  <br>
 
 <footer style="position:relative;">
      <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
    </footer>
       <script src="jquery-3.3.1.min.js"></script>
       <script src="SC.js"></script>
+      <script src="checkout.js"></script>
       <script src="nav.js"></script>
   </body>
 </html>

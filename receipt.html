@@ -19,8 +19,9 @@
       .receipt{
         position: relative;
         transform: translateX(-50%);
-        width: 60%;
-        margin-top: 24px;
+        width: 40%;
+        height: 480px;
+        margin-top: 20px;
         left: 50%;
         box-shadow: 2px 3px rgba(0, 0, 0, .5);
         display: block;
@@ -30,6 +31,8 @@
       }
       .receiptTitle {
         position:relative;
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 28px;
         font-family: Lao, sans-serif;
         font-weight: lighter;
@@ -41,7 +44,6 @@
         left: 50%;
         transform: translateX(-50%);
         width: 450px;
-        text-align: center;
       }
       .sub-item, .delete-item{
     		cursor: pointer;
@@ -77,22 +79,21 @@
         height: 80vh;
         width: 100vw;
       }
-      #checkout{
+      .b{
         position: relative;
-        bottom: 6px;
-        right: 6px;
+        transform: translateX(-50%);
+        left:50%;
+        top:-5px;
+        width: 240px;
+        height: 40px;
+        padding: 0px;
+        font-size: 20px;
+        border: 3px solid pink;
+        border-radius: 12px;
+        cursor: pointer;
+        transition-duration: .3s
       }
-      .button{
-        cursor:pointer;
-        border-radius:5px;
-        font-size:16px;
-        height:30px;
-        width:90px;
-        margin-top:18px;
-        border-color: pink;
-        transition-duration: .3s;
-      }
-      .button:hover{
+      .b:hover{
         background-color: pink;
         color: white;
       }
@@ -110,29 +111,22 @@
         </div>
   <div class="badan">
   <!--Content-->
-  <div style="konten">
     <div class="receipt">
-        <h1 class="receiptTitle">Your Cart</h1>
+        <h1 class="receiptTitle"></h1>
         <br>
-        <table id="show-cart"><br></table>
         <br>
-        <table style="width:100%;">
-          <tr>
-            <td style="width:25%;"><button id="clear-cart" onClick="clearCart()" class="button" style="">Clear Cart</button></td>
-            <td style="width:25%;"><span style="font-family:sans-serif;">Total Cost : Rp <span id="total-cart"></span></span></td>
-            <td style="width:25%;"><span style="padding-left:60px; font-family:sans-serif;">Total Item : <span id="cart-count">0</span></span></td>
-            <td style="width:25%;"><button id="checkout" onClick="goToCheckout()" class="button" style="float: right;">Checkout</button></td>
-          </tr>
-        </table>
-    </div>
+        <h1 class="receiptTitle" style="font-size:20px;">Your Order Has Been Sent!<br>Thank You For Ordering From Rosé Patisserie.</h1><br><br><br><br>
+        <img src="parallaxImg.png" style="width:80%; margin-left:50%; transform:translateX(-50%);"><br><br><br>
+        <button onclick="back()" class="b">Back To Home</button>
   </div>
-</div>
+  <br><br><br><br>
 
-   <footer style="position:relative;">
+<footer style="position:relative;">
      <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
    </footer>
       <script src="jquery-3.3.1.min.js"></script>
       <script src="SC.js"></script>
+      <script src="checkout.js"></script>
       <script src="nav.js"></script>
   </body>
 </html>
