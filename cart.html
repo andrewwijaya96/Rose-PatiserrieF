@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="headnav.css">
     <link rel="stylesheet" href="slideshow.css">
     <link rel="stylesheet" href="footer.css">
-    <!--<link rel="stylesheet" href="slider.css">-->
     <style media="screen">
       * {
         box-sizing: border-box;
@@ -20,8 +19,8 @@
       .receipt{
         position: relative;
         transform: translateX(-50%);
-        width: 40%;
-        margin-top: 12px;
+        width: 60%;
+        margin-top: 24px;
         left: 50%;
         box-shadow: 2px 3px rgba(0, 0, 0, .5);
         display: block;
@@ -31,14 +30,18 @@
       }
       .receiptTitle {
         position:relative;
-        transform: translateX(-50%);
-        left: 45%;
+        font-size: 28px;
+        font-family: Lao, sans-serif;
+        font-weight: lighter;
+        text-align: center;
+        margin-bottom: -18px;
       }
       #show-cart {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
         width: 450px;
+        text-align: center;
       }
       .sub-item, .delete-item{
     		cursor: pointer;
@@ -71,8 +74,13 @@
         left: 6px;
       }
       .badan{
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
+      }
+      #checkout{
+        position: relative;
+        bottom: 6px;
+        right: 6px;
       }
     </style>
   </head>
@@ -90,18 +98,24 @@
   <!--Content-->
   <div style="konten">
     <div class="receipt">
-        <span class="receiptTitle">Your Cart</span>
+        <h1 class="receiptTitle">Your Cart</h1>
         <br>
         <table id="show-cart"><br></table>
         <br>
-        <button id="clear-cart" onClick="clearCart()" style="cursor:pointer; border-radius:5px; font-size:16px; height:30px; width:90px; margin-top:18px;">Clear Cart</button>
+        <table style="width:100%;">
+          <tr>
+            <td style="width:25%;"><button id="clear-cart" onClick="clearCart()" style="cursor:pointer; border-radius:5px; font-size:16px; height:30px; width:90px; margin-top:18px;">Clear Cart</button></td>
+            <td style="width:25%;"><span>Total Cost : Rp <span id="total-cart"></span></span></td>
+            <td style="width:25%;"><span style="padding-left:60px;">Total Item : <span id="cart-count">0</span></span></td>
+            <td style="width:25%;"><button id="checkout" onClick="goToCheckout()" style="float: right; cursor:pointer; border-radius:5px; font-size:16px; height:30px; width:90px; margin-top:18px;">Checkout</button></td>
+          </tr>
+        </table>
     </div>
   </div>
 </div>
 
    <footer style="position:relative;">
-     <span class="footerText L">A B O U T &nbsp; &nbsp; U S</span>
-     <span class="footerText C">C O N T A C T &nbsp; &nbsp; U S</span>
+     <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
    </footer>
       <script src="jquery-3.3.1.min.js"></script>
       <script src="SC.js"></script>

@@ -16,7 +16,7 @@
         padding: 0px;
       }
       .badan{
-        height: 72vh;
+        height: 75vh;
         width: 100vw;
       }
     </style>
@@ -25,6 +25,8 @@
     <!--Header-->
     <header>
       <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
+      <span class="SCart"><img src="Photos/cart.png" alt="Cart Icon" onclick="goToCart()" height="35px" width="35px"></span>
+      <span id="cart-count" class="cart-count"></span>
     </header>
     <!--Headnav-->
         <div class="headNav">
@@ -33,6 +35,7 @@
         </div>
   <div class="badan">
    <!--Products-->
+   <h1 style="text-align:center; margin-top:30px; margin-bottom:-30px; font-family:sans-serif; font-weight:lighter;">Cakes</h1>
    <table style="margin-top: 70px;">
      <tr>
       <td width="250px"></td>
@@ -66,8 +69,7 @@
     </table>
 </div>
    <footer style="position:relative;">
-     <a class="footerText L">A B O U T &nbsp; &nbsp; U S</a>
-     <a class="footerText C">C O N T A C T &nbsp; &nbsp; U S</a>
+     <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
    </footer>
    <script src="jquery-3.3.1.min.js"></script>
    <script src="SC.js"></script>

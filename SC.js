@@ -37,8 +37,8 @@ $(".add-to-cart").click(function(event){
      +"</tr>"
      }
      $("#show-cart").html(output);
-     //$("#total-cart").html( totalCart() );
- //$("#cart-count").html( countCart() );
+     $("#total-cart").html( totalCart() );
+     $("#cart-count").html( countCart() );
  saveCart();
    }
 
@@ -105,9 +105,11 @@ var cart = [];
     // Clear The Cart
     function clearCart(){
       cart = [];
-      document.getElementById("show-cart").innerHTML = "";
-      saveCart();
+      document.getElementById("show-cart").innerHTML = "Your Cart Is Empty";
       document.getElementById("total-cart").innerHTML = "0";
+      document.getElementById("cart-count").innerHTML = "0";
+      saveCart();
+
     }
 
     // Shows Total Count Of Item
@@ -150,5 +152,5 @@ var cart = [];
       cart = JSON.parse(localStorage.getItem("shoppingCart"));
     }
 
-loadCart();
+  loadCart();
   displayCart();

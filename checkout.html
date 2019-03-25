@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Patiserrie</title>
+    <link rel="icon" href="Photos/roseIcon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headnav.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="footer.css">
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .receipt{
+        position: relative;
+        transform: translateX(-50%);
+        width: 40%;
+        margin-top: 20px;
+        left: 50%;
+        box-shadow: 2px 3px rgba(0, 0, 0, .5);
+        display: block;
+        border: solid 2px;
+        border-radius: 6px;
+        padding-top: 20px;
+      }
+      .receiptTitle {
+        position:relative;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        font-family: Lao, sans-serif;
+        font-weight: lighter;
+        text-align: center;
+        margin-bottom: -18px;
+      }
+      #show-cart {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 450px;
+      }
+      .sub-item, .delete-item{
+    		cursor: pointer;
+    		font-size: 36px;
+    		color: black;
+    		transition-duration: 0.3s;
+    	}
+
+    	.sub-item:hover, .delete-item:hover{
+    		cursor: pointer;
+    		font-size: 36px;
+    		color: gray;
+    		transition-duration: 0.3s;
+    	}
+    	.cartShown{
+    		width: 600px;
+    	}
+    	.itemName {
+    		width: 50%;
+    	}
+    	.itemCount {
+    		width: 4%;
+    	}
+    	.itemPrice {
+    		width: 20%;
+    	}
+      #clear-cart{
+        position: relative;
+        bottom: 6px;
+        left: 6px;
+      }
+      .badan{
+        height: 80vh;
+        width: 100vw;
+      }
+      #checkout{
+        position: relative;
+        bottom: 6px;
+        right: 6px;
+      }
+      .isiForm{
+        font-size: 20px;
+        margin: 5px 0px;
+        width: 100%;
+        border: 3px solid pink;
+        border-radius: 8px;
+        padding: 3px 0px 3px 4px;
+      }
+      form{
+        width: 100%;
+        padding: 0px 20px;
+      }
+      .submit{
+        position: relative;
+        transform: translateX(-50%);
+        left:50%;
+        top:12px;
+        width: 120px;
+        height: 40px;
+        padding: 0px;
+        font-size: 20px;
+        border: 3px solid pink;
+        border-radius: 12px;
+        cursor: pointer;
+        transition-duration: .3s
+      }
+      .submit:hover{
+        background-color: pink;
+        color: white;
+      }
+      /* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition-duration: .3s;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: pink;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+    </style>
+  </head>
+  <body>
+    <!--Header-->
+    <div class="kepala">
+      <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
+    </div>
+    <!--Headnav-->
+        <div class="headNav">
+          <a class="headNavText nonactive" style="position: absolute; left: 25%;" onclick="goToCake()">C A K E S</a>
+          <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;" onclick="goToChoux()">C H O U X</a>
+        </div>
+  <div class="badan">
+  <!--Content-->
+    <div class="receipt">
+        <h1 class="receiptTitle">Checkout</h1>
+        <br>
+        <br>
+        <form>
+          <input class="isiForm" type="text" name="name" value="" placeholder="Full Name" required id="nama">
+          <input class="isiForm" type="tel" name="phone" value="" placeholder="Phone Number" required id="telp">
+          <textarea class="isiForm" name="address" value="" placeholder="Delivery Address" required rows="4" style="font-size:16px;" id="alamat"></textarea>
+          <input class="isiForm" type="email" name="phone" value="" placeholder="Email Address" id="email">
+        <br>
+          <h1 class="receiptTitle" style="margin-bottom:-30px;">Payment Option</h1>
+          <table style="position:relative; left:50%; transform:translateX(-50%); margin-top: 50px">
+            <tr>
+              <td>
+                <label class="container">Cash On Delivery
+                  <input class="radio" type="radio" name="payment" value="Cash On Delivery" checked id="bayar">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td style="width:50px;"></td>
+              <td>
+                <label class="container">Gopay
+                  <input class="radio" type="radio" name="payment" value="Gopay" id="bayar">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="container">Debit/Credit Card
+                  <input class="radio" type="radio" name="payment" value="Debit/Credit Card" id="bayar">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+              <td style="width:50px;"></td>
+              <td>
+                <label class="container">OVO
+                  <input class="radio" type="radio" name="payment" value="OVO" id="bayar">
+                  <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+          </table>
+          <br>
+          <input type="submit" name="submit" class="submit">
+        </form>
+        <br>
+    </div>
+  </div>
+
+<footer style="position:relative;">
+     <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
+   </footer>
+      <script src="jquery-3.3.1.min.js"></script>
+      <script src="SC.js"></script>
+      <script src="nav.js"></script>
+  </body>
+</html>

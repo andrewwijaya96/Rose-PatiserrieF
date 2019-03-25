@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rose Patisserie</title>
+    <link rel="icon" href="Photos/roseIcon.png">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="headnav.css">
     <link rel="stylesheet" href="kontProduk.css">
@@ -21,12 +22,20 @@
       .konten1{
         width:100vw;
       }
+      .comments{
+        margin-top: 60px;
+        padding: 60px 160px 0px;
+        font-size: 18px;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <!--Header-->
     <div class="kepala">
       <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
+      <span class="SCart"><img src="Photos/cart.png" alt="Cart Icon" onclick="goToCart()" height="35px" width="35px"></span>
+      <span id="cart-count" class="cart-count"></span>
     </div>
 
     <!--Headnav-->
@@ -44,18 +53,44 @@
                 <p class="isi">
                   Consists of crushed Regal biscuit layered with avocado mousse and dark chocolate brownie, finished with bites of regal biscuit and crunchy pearls. What could go wrong?
                 </p>
-                <input type="button" name="" value="B U Y" class="buyBut add-to-cart" data-name="Avocado Brownie Cake" data-price="69000">
+                <div class="comments">
+                  <div class="isiKomen">
+                    "Thankyou banget ya ini sih Choux bun nya enak banget My fav definetly the Thai Milk Tea one."
+                  </div>
+                  <div class="isiKomen">
+                    "enak fillingnya banyak bgt trus manisnya pas ga enek."
+                  </div>
+                  <div class="isiKomen">
+                    "rasanya unik dan enak total apalagi ya thai milk tea kyk minum thai tea tapi dalam bentuk kue, baunya fragrant banget."
+                  </div>
+                </div>
+                <input type="button" name="" value="B U Y &nbsp; Rp 69.000" class="buyBut add-to-cart" data-name="Avocado Brownie Cake" data-price="69000">
               </td>
             </tr>
           </table>
         <div>
     <!--Footer-->
    <footer style="position:relative;">
-     <span class="footerText L">A B O U T &nbsp; &nbsp; U S</span>
-     <span class="footerText C">C O N T A C T &nbsp; &nbsp; U S</span>
-   </footer>
+     <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
+    </footer>
       <script src="jquery-3.3.1.min.js"></script>
       <script src="SC.js"></script>
       <script src="nav.js"></script>
+      <script>
+      var slideIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("isiKomen");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        x[slideIndex-1].style.display = "block";
+        setTimeout(carousel, 2000);
+      }
+      </script>
   </body>
 </html>

@@ -1,9 +1,20 @@
+
+
 function goToHome(){
   window.location = "index.html";
 }
 function goToCart(){
   window.location = "cart.html";
 }
+function goToCheckout(){
+  var jumlah = document.getElementById("cart-count").innerHTML;
+  if(jumlah == 0){
+    document.getElementById("show-cart").innerHTML = "Your Cart Is Empty, buy some stuff before you checkout";
+  }else{
+    window.location = "checkout.html";
+  }
+}
+
 function goToAboutUs(){
   window.location = "about.html";
 }

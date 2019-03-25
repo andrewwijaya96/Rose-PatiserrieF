@@ -72,7 +72,10 @@
     <!--Header-->
     <div class="kepala">
       <img src="Photos/LOGO.png" alt="Logo Rose Patiserrie" class="homeIcon C" onclick="goToHome()">
-      <span class="SCart"><img src="Photos/cart.png" alt="Cart Icon" onclick="goToCart()" height="35px" width="35px"></span>
+      <div onclick="goToCart()" style="cursor:pointer">
+        <span class="SCart"><img src="Photos/cart.png" alt="Cart Icon" height="35px" width="35px"></span>
+        <span id="cart-count" class="cart-count"></span>
+      </div
     </div>
 
     <!--Headnav-->
@@ -123,11 +126,11 @@
     <span class="gmInfo R" onClick="goToChoux()">GET MORE INFO</span>
   </div>
    <footer style="position:relative;">
-     <span class="footerText L">A B O U T &nbsp; &nbsp; U S</span>
-     <span class="footerText C">C O N T A C T &nbsp; &nbsp; U S</span>
+     <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
    </footer>
    <script src="jquery-3.3.1.min.js"></script>
    <script src="slideshow.js"></script>
+   <script src="SC.js"> </script>
    <script src="nav.js"></script>
   </body>
 </html>
