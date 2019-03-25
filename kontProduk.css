@@ -24,7 +24,6 @@
 .buyBut {
   position: absolute;
   left: 65%;
-  bottom: 4%;
   bottom: 50px;
   transform: translate(-50%, -10%);
   width: 360px;
