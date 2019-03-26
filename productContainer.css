@@ -22,6 +22,7 @@
   opacity: 0;
   transition: .5s ease;
   background-color: rgba(194, 115, 141, 0.5);
+  font-family: Lao, sans-serif;
 }
 .selection{
   height: 75%;
@@ -42,11 +43,11 @@
   text-align: center;
   color: white;
   font-size: 24px;
+  font-family: Lao, sans-serif;
 }
 
 .productName {
   top: 15%;
-  font-family: "Georgia", serif;
 }
 
 .productPrice {
