@@ -1,7 +1,7 @@
 .Slideshow {
   position: relative;
   width: 100%;
-  height: 550px;
+  height: 80vh;
   margin-top: -5px;
 }
 
@@ -18,7 +18,7 @@
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -275px;
+  margin-top: -40vh;
   height: 100%;
   padding: 16px;
   color: white;

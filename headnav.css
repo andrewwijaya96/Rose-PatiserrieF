@@ -8,13 +8,12 @@
 .headNav {
   position: relative;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   display: inline-block;
   background-color: #fdf7ef;
   overflow-x: hidden;
   z-index: 99;
-  margin-bottom: -4 vpx;
 }
 
 .headNav a {

@@ -21,13 +21,13 @@
         transform: translateX(-50%);
         width: 40%;
         height: 480px;
-        margin-top: 20px;
         left: 50%;
         box-shadow: 2px 3px rgba(0, 0, 0, .5);
         display: block;
         border: solid 2px;
         border-radius: 6px;
         padding-top: 20px;
+        background-color: white;
       }
       .receiptTitle {
         position:relative;
@@ -109,8 +109,10 @@
           <a class="headNavText nonactive" style="position: absolute; left: 25%;" onclick="goToCake()">C A K E S</a>
           <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;" onclick="goToChoux()">C H O U X</a>
         </div>
-  <div class="badan">
+  <div class="badan" style="background-color:pink; margin-top:-5px;">
   <!--Content-->
+  <br>
+  <br>
     <div class="receipt">
         <h1 class="receiptTitle"></h1>
         <br>
@@ -118,9 +120,10 @@
         <h1 class="receiptTitle" style="font-size:20px;">Your Order Has Been Sent!<br>Thank You For Ordering From Rosé Patisserie.</h1><br><br><br><br>
         <img src="parallaxImg.png" style="width:80%; margin-left:50%; transform:translateX(-50%);"><br><br><br>
         <button onclick="back()" class="b">Back To Home</button>
-  </div>
-  <br><br><br><br>
 
+  </div>
+  <br><br><br><br><br>
+</div>
 <footer style="position:relative;">
      <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
    </footer>

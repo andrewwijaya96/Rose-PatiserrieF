@@ -15,18 +15,17 @@
         margin: 0px;
         padding: 0px;
       }
-
       .receipt{
         position: relative;
         transform: translateX(-50%);
         width: 40%;
-        margin-top: 20px;
         left: 50%;
         box-shadow: 2px 3px rgba(0, 0, 0, .5);
         display: block;
         border: solid 2px;
         border-radius: 6px;
         padding-top: 20px;
+        background-color: white;
       }
       .receiptTitle {
         position:relative;
@@ -69,70 +68,55 @@
         background-color: pink;
         color: white;
       }
-      /* The container */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Create a custom radio button */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-  transition-duration: .3s;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: pink;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
-}
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+        transition-duration: .3s;
+      }
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      .container input:checked ~ .checkmark {
+        background-color: pink;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .container .checkmark:after {
+       	top: 9px;
+      	left: 9px;
+      	width: 8px;
+      	height: 8px;
+      	border-radius: 50%;
+      	background: white;
+      }
     </style>
   </head>
   <body>
@@ -145,8 +129,9 @@
           <a class="headNavText nonactive" style="position: absolute; left: 25%;" onclick="goToCake()">C A K E S</a>
           <a class="headNavText nonactive" style="position: absolute; float: right; right: 25%;" onclick="goToChoux()">C H O U X</a>
         </div>
-  <div class="badan">
-  <!--Content-->
+  <div class="badan" style="background-color:pink; margin-top:-5px;">
+  <br>
+  <br>
     <div class="receipt">
         <h1 class="receiptTitle">Checkout</h1>
         <br>
@@ -197,7 +182,6 @@
         <br>
     </div>
   </div>
-  </div>
   <table style="width:100%; visibility:hidden;">
     <tr>
       <td style="width:25%;"><span>Total Cost : Rp <span id="total-cart"></span></span></td>
@@ -208,6 +192,7 @@
   <br>
   <br>
 
+  </div>
 <footer style="position:relative;">
      <span class="footerText L" onclick="goToAboutUs()">A B O U T &nbsp; &nbsp; U S</span>
    </footer>

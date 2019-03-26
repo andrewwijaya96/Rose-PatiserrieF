@@ -105,7 +105,7 @@ var cart = [];
     // Clear The Cart
     function clearCart(){
       cart = [];
-      document.getElementById("show-cart").innerHTML = "Your Cart Is Empty";
+      document.getElementById("show-cart").innerHTML = "";
       document.getElementById("total-cart").innerHTML = "0";
       document.getElementById("cart-count").innerHTML = "0";
       saveCart();
