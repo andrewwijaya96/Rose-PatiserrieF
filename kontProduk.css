@@ -24,7 +24,7 @@
 .buyBut {
   position: absolute;
   left: 65%;
-  bottom: 8px;
+  bottom: 16px;
   transform: translate(-50%, -10%);
   width: 360px;
   height: 15%;
@@ -41,4 +41,12 @@
 .buyBut:hover {
   background-color: rgba(237, 200, 205);
   color:white;
+}
+.comments{
+  position: static;
+  padding: 60px 160px 0px;
+  font-size: 18px;
+  text-align: center;
+  font-family: Lao, sans-serif;
+  font-style: oblique;
 }
