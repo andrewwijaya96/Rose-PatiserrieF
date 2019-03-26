@@ -1,5 +1,5 @@
 .proSlider {
-  height: 52%;
+  height: 83vh;
 }
 .judul{
   left: 70%;
@@ -24,7 +24,7 @@
 .buyBut {
   position: absolute;
   left: 65%;
-  bottom: 0px;
+  bottom: 8px;
   transform: translate(-50%, -10%);
   width: 360px;
   height: 15%;
