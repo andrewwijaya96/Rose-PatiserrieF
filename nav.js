@@ -9,7 +9,7 @@ function goToCart(){
 function goToCheckout(){
   var jumlah = document.getElementById("cart-count").innerHTML;
   if(jumlah == 0){
-    document.getElementById("show-cart").innerHTML = "Your Cart Is Empty, buy some stuff before you checkout";
+    document.getElementById("show-cart").innerHTML = "Your Cart Is Empty, add sweetness to your cart by buying before you checkout";
   }else{
     window.location = "checkout.html";
   }
