@@ -2,11 +2,11 @@
   height: 83vh;
 }
 .judul{
-  left: 70%;
+  left: 72vw;
   top:160px;
   width: 896px;
   transform: translateX(-60%);
-  font-size:52px;
+  font-size:5vh;
   text-align:center;
   font-family: Avenir-Oblique;
   position:absolute;
@@ -23,7 +23,7 @@
 }
 .buyBut {
   position: absolute;
-  left: 65%;
+  left: 65vw;
   bottom: 16px;
   transform: translate(-50%, -10%);
   width: 360px;
